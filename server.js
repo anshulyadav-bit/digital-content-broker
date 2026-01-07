@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json({ limit: "1mb" }));
 
 // ===== ENV VARS =====
-const NEWSAPI_KEY = process.env.NEWSAPI_KEY; // your NewsAPI key (secret, backend-only)
+const NEWSAPI_KEY = process.env.a3a3fb31955a42638fa6d99de0547bbb; // your NewsAPI key (secret, backend-only)
 const BROKER_KEY = process.env.BROKER_KEY;   // key your GPT Action will send in X-API-Key
 
 if (!NEWSAPI_KEY) console.warn("Missing NEWSAPI_KEY env var");
@@ -339,3 +339,4 @@ app.get("/", (req, res) => res.send("OK"));
 // start
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Broker running on port ${port}`));
+
